@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "ES2020",
     "target": "es2018",
     "lib": ["es2018", "dom"],
     "strict": true,
+    
     "moduleResolution": "node",
     "esModuleInterop": true,
     "types": ["node"],

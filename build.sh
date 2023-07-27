@@ -12,7 +12,7 @@ echo "---> Checking wasm-pack version..."
 # fi
 
 echo "---> Building WebAssembly with wasm-pack..."
-wasm-pack build
+wasm-pack build --target web
 
 # echo "---> Patching JavaScript glue code..."
 # # Wraps write/end with asyncify magic and adds this returns for chaining
@@ -24,5 +24,7 @@ mkdir -p dist
 cp pkg/html_rewriter.js dist/html_rewriter.js
 cp pkg/html_rewriter_bg.wasm dist/html_rewriter_bg.wasm
 cp pkg/html_rewriter_bg.js dist/html_rewriter_bg.js
-# cp src/asyncify.js dist/asyncify.js
+cp src/asyncify.js dist/asyncify.js
 cp pkg/html_rewriter.d.ts dist/html_rewriter.d.ts
+cp pkg/html_rewriter.d.ts dist/html_rewriter.d.ts
+cp pkg/html_rewriter_bg.wasm.d.ts dist/html_rewriter_bg.wasm.d.ts

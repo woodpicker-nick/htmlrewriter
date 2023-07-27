@@ -1,10 +1,6 @@
-import {
-    
-    HTMLRewriter as RawHTMLRewriter,
-    
-} from './dist/html_rewriter'
-
-
+import init, { HTMLRewriter as RawHTMLRewriter } from './dist/html_rewriter'
+// @ts-ignore
+import wasm from './dist/html_rewriter_bg.wasm?module'
 const encoder = new TextEncoder()
 const decoder = new TextDecoder()
 
@@ -12,10 +8,9 @@ type ElementHandlers = {
     element?(element: any): void | Promise<void>
 }
 
-
+let p = init(wasm)
 export class HTMLRewriter {
-    private elementHandlers: [selector: string, handlers: any][] =
-        []
+    private elementHandlers: [selector: string, handlers: any][] = []
 
     constructor(private readonly options?: any) {}
 
@@ -25,7 +20,7 @@ export class HTMLRewriter {
     }
 
     async transform(res: Response) {
-
+        await p
         let output = ''
         const rewriter = new RawHTMLRewriter((chunk: any) => {
             output += decoder.decode(chunk)
@@ -43,19 +38,3 @@ export class HTMLRewriter {
         }
     }
 }
-
-async function main() {
-    
-    const res1 = new Response(`<h1>hello</h1><a href="/foo">foo</a>`)
-    const res2 = await new HTMLRewriter().on('h1', {
-        element(element) {
-            element.setInnerContent('hello world')
-        }
-    }).on('a', {
-        element(element) {
-            element.setAttribute('href', 'https://google.com')
-        }
-    }).transform(res1)
-    console.log(await res2.text())
-}
-main()
