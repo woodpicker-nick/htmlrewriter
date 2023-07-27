@@ -2,11 +2,11 @@
   "name": "@xmorse/html-rewriter-wasm",
   "version": "0.0.0",
   "description": "WebAssembly version of HTMLRewriter",
-  "main": "index.ts",
+  "main": "src/index.ts",
   
   "files": [
     "dist",
-    "index.ts"
+    "src"
   ],
   "scripts": {
     "prepublishOnly": "npm run build && npm test",
