@@ -1,11 +1,12 @@
 {
-  "name": "html-rewriter-wasm",
-  "version": "0.4.1",
+  "name": "@xmorse/html-rewriter-wasm",
+  "version": "0.0.0",
   "description": "WebAssembly version of HTMLRewriter",
-  "main": "dist/html_rewriter.js",
-  "types": "dist/html_rewriter.d.ts",
+  "main": "index.ts",
+  
   "files": [
-    "dist"
+    "dist",
+    "index.ts"
   ],
   "scripts": {
     "prepublishOnly": "npm run build && npm test",
