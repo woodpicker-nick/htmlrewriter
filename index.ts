@@ -8,6 +8,7 @@ type ElementHandlers = {
     element?(element: any): void | Promise<void>
 }
 
+// console.log(wasm)
 let p = init(wasm)
 export class HTMLRewriter {
     private elementHandlers: [selector: string, handlers: any][] = []
