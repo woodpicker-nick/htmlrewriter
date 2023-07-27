@@ -1,6 +1,6 @@
 import init, { HTMLRewriter as RawHTMLRewriter } from '../dist/html_rewriter'
 // @ts-ignore
-import wasm from './dist/html_rewriter_bg.wasm?module'
+import wasm from '../dist/html_rewriter_bg.wasm?module'
 import { DocumentHandlers, ElementHandlers } from './types'
 const encoder = new TextEncoder()
 const decoder = new TextDecoder()
