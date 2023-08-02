@@ -6,6 +6,11 @@
     "files": [
         "dist",
         "README.md",
+        "bun.js",
+        "browser.js",
+        "cloudflare.js",
+        "default.js",
+        "node.mjs",
         "src"
     ],
     "types": "dist/index.d.ts",

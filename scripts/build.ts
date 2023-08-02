@@ -9,7 +9,11 @@ async function main() {
     await fs.mkdirSync(`dist`, { recursive: true })
     await fs.copy(`pkg`, `dist`, {
         filter(p) {
-            return !p.endsWith('package.json')
+            return (
+                !p.endsWith('package.json') &&
+                !p.endsWith('gitignore') &&
+                !p.endsWith('README.md')
+            )
         },
     })
     await fs.copy(`src`, `dist`, {
