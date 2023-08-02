@@ -1,7 +1,7 @@
 {
     "name": "@xmorse/htmlrewriter",
     "version": "0.0.0",
-    "description": "Use Cloudflare HTMLRewriter in Vercel Edge",
+    "description": "Use Cloudflare HTMLRewriter in Node,js, Browser, Vercel Edge and more",
     "type": "module",
     "files": [
         "dist",
