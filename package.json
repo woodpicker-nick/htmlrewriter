@@ -25,7 +25,6 @@
         "./package.json": "./package.json"
     },
     "scripts": {
-        "prepublishOnly": "npm run build",
         "try": "bun scripts/try.js && node scripts/try.js && pnpm vite dev scripts",
         "build": "vite-node scripts/build.ts"
     },
@@ -41,7 +40,7 @@
         "htmlrewriter",
         "lol"
     ],
-    "author": "MrBBot",
+    "author": "Tommaso De Rossi, morse <beats.by.morse@gmail.com>",
     "license": "BSD-3-Clause",
     "bugs": {
         "url": "https://github.com/remorses/htmlrewriter/issues"
