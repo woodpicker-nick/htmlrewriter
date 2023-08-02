@@ -18,6 +18,7 @@
         ".": {
             "bun": "./bun.js",
             "workerd": "./cloudflare.js",
+            "edge-light": "./vercel.js",
             "node": "./node.mjs",
             "browser": "./browser.js",
             "default": "./default.js"
