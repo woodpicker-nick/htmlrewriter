@@ -8,13 +8,13 @@ Cloudflare `HTMLRewriter` packaged to work with
 ## Install
 
 ```
-npm i @xmorse/htmlrewriter
+npm i htmlrewriter
 ```
 
 ## Usage
 
 ```ts
-import { HTMLRewriter } from '@xmorse/htmlrewriter'
+import { HTMLRewriter } from 'htmlrewriter'
 
 const rewriter = new HTMLRewriter()
 

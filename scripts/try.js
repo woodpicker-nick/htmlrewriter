@@ -1,4 +1,4 @@
-import { HTMLRewriter } from '@xmorse/htmlrewriter'
+import { HTMLRewriter } from 'htmlrewriter'
 
 const rewriter = new HTMLRewriter()
 
