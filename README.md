@@ -10,9 +10,10 @@
 
 Cloudflare `HTMLRewriter` packaged to work with
 
--   Node.js
+-   Node.js (reading the wasm from file system)
 -   Next.js (appending `?module` to wasm imports)
 -   browser (fetching the wasm file at runtime)
+-   Deno (fetching the wasm file at runtime with file:// protocol)
 -   Bun & Cloudflare (simply using the global `HTMLRewriter` object)
 
 ## Install
