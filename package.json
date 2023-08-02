@@ -1,7 +1,7 @@
 {
     "name": "htmlrewriter",
     "version": "0.0.0",
-    "description": "Use Cloudflare HTMLRewriter in Node,js, Browser, Vercel Edge and more",
+    "description": "Use Cloudflare HTMLRewriter in Node.js, Browser, Next.js and more",
     "type": "module",
     "files": [
         "dist",
