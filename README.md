@@ -1,3 +1,13 @@
+<div align='center'>
+    <br/>
+    <br/>
+    <br/>
+    <h3>middleflare</h3>
+    <p></p>
+    <br/>
+    <br/>
+</div>
+
 Cloudflare `HTMLRewriter` packaged to work with
 
 -   Node.js
@@ -23,7 +33,7 @@ rewriter.on('a', {
         element.setAttribute('href', 'https://www.baidu.com')
     },
 })
-const res = await rewriter.transform(
+const res = rewriter.transform(
     new Response('<a href="https://www.google.com">google</a>'),
 )
 console.log(await res.text())
