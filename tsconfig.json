@@ -1,13 +1,17 @@
 {
-  "compilerOptions": {
-    "module": "ES2020",
-    "target": "es2018",
-    "lib": ["es2018", "dom"],
-    "strict": true,
-    
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "types": ["node"],
-    "sourceMap": true
-  }
+    "compilerOptions": {
+        "module": "ES2020",
+        "target": "es2018",
+        "lib": ["es2018", "dom"],
+        "strict": true,
+        "rootDir": "src",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "allowJs": false,
+        "types": ["node"],
+        "outDir": "dist",
+        "sourceMap": true
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "dist", "scripts", "play.ts"]
 }
