@@ -9,6 +9,7 @@
         "esModuleInterop": true,
         "allowJs": false,
         "types": ["node"],
+        "noImplicitAny": false,
         "outDir": "dist",
         "sourceMap": true
     },
