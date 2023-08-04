@@ -72,7 +72,12 @@ export function HTMLRewriterWrapper(initPromise: Promise<any>) {
                 },
             )
             const promise = body.pipeTo(transformStream.writable)
-            promise.catch(() => {}).finally(() => rewriter?.free())
+            promise
+                .catch((e) => {
+                    console.error(`Error in HTMLRewriter:`, e)
+                    return null
+                })
+                .finally(() => rewriter?.free())
 
             // Return a response with the transformed body, copying over headers, etc
             const res = new Response(transformStream.readable, response)
