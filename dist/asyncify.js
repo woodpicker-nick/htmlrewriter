@@ -1,5 +1,3 @@
-import assert from 'assert'
-
 /**
  * @typedef {object} WasmExports
  * @property {WebAssembly.Memory} memory
@@ -47,8 +45,20 @@ const State = {
     REWINDING: 2,
 }
 
+function assertStrictEqual(actual, expected) {
+    if (actual !== expected) {
+        throw new Error(`Expected ${actual} to equal ${expected}`)
+    }
+}
+
+function assert(condition) {
+    if (!condition) {
+        throw new Error('Assertion failed')
+    }
+}
+
 function assertNoneState() {
-    assert.strictEqual(wasm.asyncify_get_state(), State.NONE)
+    assertStrictEqual(wasm.asyncify_get_state(), State.NONE)
 }
 
 /**
@@ -72,7 +82,7 @@ function awaitPromise(stackPtr, promise) {
     assertNoneState()
 
     // https://github.com/WebAssembly/binaryen/blob/fb9de9d391a7272548dcc41cd8229076189d7398/src/passes/Asyncify.cpp#L106
-    assert.strictEqual(stackPtr % 4, 0)
+    assertStrictEqual(stackPtr % 4, 0)
     getInt32Memory().set([stackPtr + 8, stackPtr + 1024], stackPtr / 4)
 
     wasm.asyncify_start_unwind(stackPtr)

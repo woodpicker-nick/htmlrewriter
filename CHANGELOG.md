@@ -1,5 +1,11 @@
 # htmlrewriter
 
+## 0.0.4
+
+### Patch Changes
+
+-   Remove dep on assert
+
 ## 0.0.3
 
 ### Patch Changes

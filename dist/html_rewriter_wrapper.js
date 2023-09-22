@@ -57,7 +57,12 @@ export function HTMLRewriterWrapper(initPromise) {
                 flush: () => rewriter.end(),
             });
             const promise = body.pipeTo(transformStream.writable);
-            promise.catch(() => { }).finally(() => rewriter === null || rewriter === void 0 ? void 0 : rewriter.free());
+            promise
+                .catch((e) => {
+                console.error(`Error in HTMLRewriter:`, e);
+                return null;
+            })
+                .finally(() => rewriter === null || rewriter === void 0 ? void 0 : rewriter.free());
             // Return a response with the transformed body, copying over headers, etc
             const res = new Response(transformStream.readable, response);
             // If Content-Length is set, it's probably going to be wrong, since we're
