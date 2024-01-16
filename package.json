@@ -1,6 +1,6 @@
 {
     "name": "htmlrewriter",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Use Cloudflare HTMLRewriter in Node.js, Browser, Next.js and more",
     "type": "module",
     "files": [
@@ -17,6 +17,7 @@
     "types": "dist/index.d.ts",
     "exports": {
         ".": {
+            "types": "./dist/index.d.ts",
             "bun": "./bun.js",
             "workerd": "./cloudflare.js",
             "edge-light": "./vercel.js",

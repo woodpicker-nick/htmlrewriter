@@ -1,5 +1,11 @@
 # htmlrewriter
 
+## 0.0.5
+
+### Patch Changes
+
+-   Add types export
+
 ## 0.0.4
 
 ### Patch Changes
