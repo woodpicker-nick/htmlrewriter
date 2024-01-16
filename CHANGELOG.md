@@ -1,5 +1,11 @@
 # htmlrewriter
 
+## 0.0.6
+
+### Patch Changes
+
+-   Fix types for HtmlRewriter
+
 ## 0.0.5
 
 ### Patch Changes
