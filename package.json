@@ -1,6 +1,6 @@
 {
     "name": "htmlrewriter",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Use Cloudflare HTMLRewriter in Node.js, Browser, Next.js and more",
     "type": "module",
     "files": [

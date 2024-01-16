@@ -1,5 +1,11 @@
 # htmlrewriter
 
+## 0.0.7
+
+### Patch Changes
+
+-   HTMLRewriter initPromise is static, fix typescript declaration bug
+
 ## 0.0.6
 
 ### Patch Changes
