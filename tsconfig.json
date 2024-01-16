@@ -11,8 +11,9 @@
         "types": ["node"],
         "noImplicitAny": false,
         "outDir": "dist",
+        "declaration": true,
         "sourceMap": true
     },
     "include": ["src"],
-    "exclude": ["node_modules", "dist", "scripts", "play.ts"]
+    "exclude": ["node_modules", "scripts", "play.ts"]
 }

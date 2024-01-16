@@ -10,13 +10,10 @@ export function HTMLRewriterWrapper(initPromise: Promise<any>) {
     return class HTMLRewriter {
         initPromise: Promise<void> = initPromise
 
-        constructor(private options: any = {}) {}
+        constructor(options: any = {}) {}
 
-        private elementHandlers: [
-            selector: string,
-            handlers: ElementHandlers,
-        ][] = []
-        private documentHandlers: DocumentHandlers[] = []
+        elementHandlers: [selector: string, handlers: ElementHandlers][] = []
+        documentHandlers: DocumentHandlers[] = []
 
         on(selector: string, handlers: ElementHandlers): this {
             this.elementHandlers.push([selector, handlers])

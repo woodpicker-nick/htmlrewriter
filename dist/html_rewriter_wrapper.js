@@ -5,7 +5,6 @@ const decoder = new TextDecoder();
 export function HTMLRewriterWrapper(initPromise) {
     return class HTMLRewriter {
         constructor(options = {}) {
-            this.options = options;
             this.initPromise = initPromise;
             this.elementHandlers = [];
             this.documentHandlers = [];
