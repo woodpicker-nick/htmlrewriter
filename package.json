@@ -55,7 +55,7 @@
         "@types/node": "^14.17.5",
         "@xmorse/deployment-utils": "^0.0.32",
         "fs-extra": "^11.1.1",
-        "htmlrewriter": "*",
+        "htmlrewriter": "^0.0.7",
         "prettier": "^2.3.2"
     }
 }
