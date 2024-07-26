@@ -5,15 +5,17 @@
         "lib": ["es2018", "dom"],
         "strict": true,
         "rootDir": "src",
-        "moduleResolution": "node",
+        "moduleResolution": "Node",
         "esModuleInterop": true,
         "allowJs": false,
         "types": ["node"],
         "noImplicitAny": false,
+        "skipLibCheck": true,
         "outDir": "dist",
         "declaration": true,
+        
         "sourceMap": true
     },
     "include": ["src"],
-    "exclude": ["node_modules", "scripts", "play.ts"]
+    "exclude": ["node_modules", "scripts", "play.ts", "src/*.test.ts"]
 }

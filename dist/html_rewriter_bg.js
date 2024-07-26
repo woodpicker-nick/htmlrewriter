@@ -1,5 +1,7 @@
 import { awaitPromise } from './asyncify.js';
-import * as wasm from './html_rewriter_bg.wasm';
+import wasm from './html_rewriter_bg.wasm';
+console.log(wasm);
+
 
 const heap = new Array(32).fill(undefined);
 

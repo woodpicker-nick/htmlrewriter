@@ -1,4 +1,4 @@
-import { callMain, shell } from '@xmorse/deployment-utils/src/index'
+import { callMain, shell } from '@xmorse/deployment-utils'
 import path from 'path'
 import fs from 'fs-extra'
 

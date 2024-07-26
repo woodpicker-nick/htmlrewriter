@@ -30,7 +30,7 @@
     "scripts": {
         "try": "bun scripts/try.js && node scripts/try.js && deno run --allow-read scripts/try.js && pnpm vite dev scripts",
         "prepublishOnly": "pnpm build",
-        "build": "vite-node scripts/build.ts"
+        "build": "tsx scripts/build.ts"
     },
     "repository": {
         "type": "git",
@@ -56,6 +56,7 @@
         "@xmorse/deployment-utils": "^0.1.10",
         "fs-extra": "^11.1.1",
         "htmlrewriter": "^0.0.7",
-        "prettier": "^2.3.2"
+        "prettier": "^2.3.2",
+        "vitest": "^2.0.4"
     }
 }
