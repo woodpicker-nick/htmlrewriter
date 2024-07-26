@@ -59,12 +59,12 @@ class HTMLRewriter {
                     rewriter.end();
                 }
                 catch (error) {
-                    rewriter.end();
+                    // rewriter.end()
                     controller.error(error);
                 }
                 finally {
-                    reader.releaseLock();
                     rewriter.free();
+                    reader.releaseLock();
                     controller.close();
                 }
             },

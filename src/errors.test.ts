@@ -16,7 +16,33 @@ test(
                 },
             })
             .transform(res)
-        expect(await transform.text().catch((e) => e)).toBeInstanceOf(Error)
+        const err = await transform.text().catch((e) => e)
+        expect(err).toBeInstanceOf(Error)
+        expect(err.message).toContain('aborted')
+    },
+    1000 * 10,
+)
+test(
+    'abort',
+    async () => {
+        const abortController = new AbortController()
+        const res = await fetch('https://framer.com', {
+            signal: abortController.signal,
+        })
+
+        const err = await new HTMLRewriter()
+            .on('a', {
+                element(element) {
+                    abortController.abort()
+                },
+            })
+            .transform(res)
+            .text()
+            .catch((e) => e)
+
+        expect(err).toBeInstanceOf(Error)
+        expect(err.message).toContain('aborted')
+        // console.log(err)
     },
     1000 * 10,
 )
