@@ -1,5 +1,23 @@
 # htmlrewriter
 
+## 0.0.12
+
+### Patch Changes
+
+-   Fix dist/html_rewriter
+
+## 0.0.11
+
+### Patch Changes
+
+-   Add export for dist/html_rewriter
+
+## 0.0.10
+
+### Patch Changes
+
+-   Added more exports for individual files
+
 ## 0.0.7
 
 ### Patch Changes
