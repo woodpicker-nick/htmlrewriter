@@ -57,7 +57,7 @@
     "devDependencies": {
         "@types/fs-extra": "^11.0.1",
         "@types/node": "^20.11.13",
-        "@xmorse/deployment-utils": "^0.1.10",
+        "@xmorse/deployment-utils": "^0.2.18",
         "fs-extra": "^11.1.1",
         "htmlrewriter": "^0.0.12",
         "prettier": "^2.3.2",
