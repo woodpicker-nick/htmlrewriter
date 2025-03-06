@@ -1,7 +1,7 @@
 {
-    "name": "htmlrewriter",
-    "version": "0.0.12",
-    "description": "Use Cloudflare HTMLRewriter in Node.js, Browser, Next.js and more",
+    "name": "@nick/htmlrewriter",
+    "version": "1.0.0",
+    "description": "Use Cloudflare HTMLRewriter in Node.js, Browser, Next.js and more, fork by htmlrewriter.",
     "type": "module",
     "files": [
         "dist",
@@ -12,7 +12,7 @@
         "browser.js",
         "cloudflare.js",
         "default.js",
-        "node.mjs"
+        "node.cjs"
     ],
     "types": "dist/index.d.ts",
     "exports": {
@@ -21,7 +21,7 @@
             "bun": "./bun.js",
             "workerd": "./cloudflare.js",
             "edge-light": "./vercel.js",
-            "node": "./node.mjs",
+            "node": "./node.cjs",
             "browser": "./browser.js",
             "default": "./default.js"
         },
@@ -34,7 +34,7 @@
         "try": "bun scripts/try.js && node scripts/try.js && deno run --allow-read scripts/try.js && pnpm vite dev scripts",
         "prepublishOnly": "pnpm build",
         "test": "pnpm vitest",
-        "build": "tsx scripts/build.ts"
+        "build": "npx tsx scripts/build.ts"
     },
     "repository": {
         "type": "git",
@@ -61,6 +61,8 @@
         "fs-extra": "^11.1.1",
         "htmlrewriter": "^0.0.12",
         "prettier": "^2.3.2",
+        "typescript": "^5.8.2",
         "vitest": "^2.1.8"
-    }
+    },
+    "packageManager": "pnpm@9.15.0+sha1.8bfdb6d72b4d5fdf87d21d27f2bfbe2b21dd2629"
 }

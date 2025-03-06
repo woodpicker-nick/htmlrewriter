@@ -1,4 +1,7 @@
-import { HTMLRewriter as RawHTMLRewriter } from '../dist/html_rewriter.js';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HTMLRewriterWrapper = HTMLRewriterWrapper;
+const html_rewriter_js_1 = require("../dist/html_rewriter.js");
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();
 // console.log(wasm)
@@ -34,7 +37,7 @@ class HTMLRewriter {
                 // BaseHTMLRewriter can only be used once.
                 await HTMLRewriter.initPromise;
                 // console.log('creating rewriter')
-                rewriter = new RawHTMLRewriter((chunk) => {
+                rewriter = new html_rewriter_js_1.HTMLRewriter((chunk) => {
                     // enqueue will throw on empty chunks
                     if (chunk.length !== 0)
                         controller.enqueue(chunk);
@@ -77,7 +80,7 @@ class HTMLRewriter {
         return res;
     }
 }
-export function HTMLRewriterWrapper(initPromise) {
+function HTMLRewriterWrapper(initPromise) {
     HTMLRewriter.initPromise = initPromise;
     return HTMLRewriter;
 }
